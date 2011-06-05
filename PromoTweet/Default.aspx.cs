@@ -19,6 +19,7 @@ namespace PromoTweet
             int id = 0;
             foreach (TwitterEntry entry in result)
             {
+                
                 s += "<a target= \"_blank\" href=\""+ entry.Uri +"\"> <img height=\"48\" + width=\"48\" id=\"Image" + (++id) +"\" src=\""+ entry.Avatar + "\" title=\"" + entry.Author +" "+ entry.Tweet + "\"/> <a/>" ;
             }
 
