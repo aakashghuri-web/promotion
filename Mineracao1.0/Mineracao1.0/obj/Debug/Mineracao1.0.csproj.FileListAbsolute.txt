@@ -1,0 +1,5 @@
+C:\Users\marina.alecrim\Documents\Visual Studio 2008\Projects\Mineracao1.0\Mineracao1.0\bin\Mineracao1.0.dll
+C:\Users\marina.alecrim\Documents\Visual Studio 2008\Projects\Mineracao1.0\Mineracao1.0\bin\Mineracao1.0.pdb
+C:\Users\marina.alecrim\Documents\Visual Studio 2008\Projects\Mineracao1.0\Mineracao1.0\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\marina.alecrim\Documents\Visual Studio 2008\Projects\Mineracao1.0\Mineracao1.0\obj\Debug\Mineracao1.0.dll
+C:\Users\marina.alecrim\Documents\Visual Studio 2008\Projects\Mineracao1.0\Mineracao1.0\obj\Debug\Mineracao1.0.pdb

@@ -1,0 +1,42 @@
+﻿body
+{
+    background-image:url(../Imagens/Nuvens.jpg);
+    background-repeat:repeat;
+    
+}
+
+#divTudo
+{
+    background-color:rgb(222,239,246);
+    width:1000px;
+    height:700px;
+    margin: 0 auto 0 auto;
+       
+}
+
+#TextBoxSearch
+{
+    width:297px;
+    height:54px;
+    margin-bottom:24px;
+    background-image:url(../Imagens/campoSearch4.png);
+    
+}
+
+
+.conteudo
+{
+    display:block;
+    float:left;   
+    width:277px; 
+    height:60px;
+    font-family:Calibri;
+    padding:0 28px 0 28px;
+}
+
+.linksTweet
+{
+    color:Blue; 
+    text-decoration: underline;
+    font-family:Calibri;
+}
