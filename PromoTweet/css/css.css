@@ -5,6 +5,13 @@
     
 }
 
+input:focus {
+    outline: none;
+    outline-width: 0;
+    outline-color: Red;
+    border: none;
+}
+
 #divTudo
 {
     background-color:rgb(222,239,246);
@@ -16,19 +23,18 @@
 
 #TextBoxSearch
 {
-    width:297px;
-    height:54px;
     margin-bottom:24px;
-    background-image:url(../Imagens/campoSearch4.png);
-    
+    background-image:url('../Imagens/campoSearch4.png');
+    padding-left:10px;
 }
 
 
 .conteudo
 {
     display:block;
-    float:left;   
-    width:277px; 
+    text-align:center;
+    float:left;
+    width:270px; 
     height:60px;
     font-family:Calibri;
     padding:0 28px 0 28px;
