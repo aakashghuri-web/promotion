@@ -12,7 +12,7 @@ namespace PromoTweet.Twitter
     public class TwitterSearch
     {
         const string TWITTER_SEARCH_URL = "http://search.twitter.com/search.atom?rpp={0}&q={1}";
-        const int NUM_TWITTER = 5;
+        const int NUM_TWITTER = 4;
 
         public TwitterSearch()
         {

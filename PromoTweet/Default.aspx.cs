@@ -20,20 +20,25 @@ namespace Mineracao1._0
             List<TwitterEntry> result = engine.BuscaEntradaTwitter("promocao");
             StringBuilder sb = new StringBuilder();
             int id = 0;
+
+            sb.Append("<table style=\"width:270\">");
             foreach (TwitterEntry entry in result)
             {
+                sb.Append("<tr><td>");
                 sb.Append("<div id=\"t\"" + id + "style=\"border-bottom-style:solid; border-bottom-color:Black;\" display:\"block\" ");
                 sb.Append("<div style=\"float:left; width:20%\" display:\"block\">");
                         sb.Append("<img height=\"48\" + width=\"48\" id=\"Image" + id + "\" src=\"" + entry.Avatar  + "\" title=\"" + entry.Author + "\" />");
                     sb.Append("</div>");
 
-                    sb.Append("<div style=\"width:80%;padding-left:4px\" display:\"block\"");
-                        sb.Append("<a id=\"a"+ id +"\" target=\"_blank\" href=\""+ entry.Uri + "\" class=\"linksTweet\">"+ entry.Author +"</a><br/>");
-                        sb.Append("<label id=\"l"+ id +"\">" + entry.Tweet + " </label>");
+                    sb.Append("<div class=\"tweetBox\">");
+                        sb.Append("<a id=\"a"+ id +"\" target=\"_blank\" href=\""+ entry.Uri + "\" class=\"linksTweet\">"+ entry.Author +"</a>");
+                        sb.Append("<br/><label id=\"l"+ id +"\">" + entry.Tweet + " </label>");
                     sb.Append("</div>");
-                sb.Append("<br /></div>");
+                sb.Append("</div>");
+                sb.Append("</tr></td>");
                 id++;
             }
+            sb.Append("</table>");
 
             Label1.Text = sb.ToString();
             Label2.Text = sb.ToString();
