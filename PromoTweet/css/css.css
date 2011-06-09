@@ -1,7 +1,6 @@
 ﻿body
 {
-    background-image:url(../Imagens/Nuvens.jpg);
-    background-repeat:repeat;
+    background-color:White;
 }
 
 a 
@@ -25,9 +24,14 @@ input:focus {
 #divTudo
 {
     background-color:rgb(222,239,246);
+    border:1px solid #ACE;
     width:1000px;
-    height:700px;
+    height:900px;
     margin: 0 auto 0 auto;
+    margin-top:25px;
+    padding-bottom:25px;
+    overflow:hidden;
+    display:block;
        
 }
 
@@ -78,4 +82,20 @@ input:focus {
     font-family:Arial,"Helvetica Neue",sans-serif;
     font-size:13px;
     text-align:left;
+}
+
+.tweetContainer 
+{
+    background-color:White;
+    overflow:hidden;
+    overflow-x:hidden;
+    width:276px;
+    height:400px;
+}
+
+.tweetContainer:hover
+{
+    overflow:scroll;
+    overflow-x:hidden;
+    width:280px;
 }

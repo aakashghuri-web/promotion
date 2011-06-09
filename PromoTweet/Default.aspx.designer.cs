@@ -67,15 +67,6 @@ namespace PromoTweet {
         protected global::System.Web.UI.WebControls.Label divulgacao;
         
         /// <summary>
-        /// ImageButton2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton ImageButton2;
-        
-        /// <summary>
         /// Image10 control.
         /// </summary>
         /// <remarks>
@@ -94,15 +85,6 @@ namespace PromoTweet {
         protected global::System.Web.UI.WebControls.Label retweets;
         
         /// <summary>
-        /// ImageButton3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton ImageButton3;
-        
-        /// <summary>
         /// Image15 control.
         /// </summary>
         /// <remarks>
@@ -119,14 +101,5 @@ namespace PromoTweet {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label descontos;
-        
-        /// <summary>
-        /// ImageButton4 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton ImageButton4;
     }
 }

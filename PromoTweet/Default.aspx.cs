@@ -20,22 +20,22 @@ namespace PromoTweet
 
 
             List<TwitterEntry> query1 = engine.BuscaEntradaTwitter("promoção");
-            List<TwitterEntry> query2 = engine.BuscaEntradaTwitter("ganhe");
+            /*List<TwitterEntry> query2 = engine.BuscaEntradaTwitter("ganhe");
             List<TwitterEntry> query3 = engine.BuscaEntradaTwitter("concorra");
             List<TwitterEntry> query4 = engine.BuscaEntradaTwitter("desconto");
             List<TwitterEntry> query5 = engine.BuscaEntradaTwitter("retuite");
             List<TwitterEntry> query6 = engine.BuscaEntradaTwitter("oferta");
             List<TwitterEntry> query7 = engine.BuscaEntradaTwitter("cadastro");
             List<TwitterEntry> query8 = engine.BuscaEntradaTwitter("cadastre");
-
+            */
             result.AddRange(query1);
-            result.AddRange(query2);
+            /*result.AddRange(query2);
             result.AddRange(query3);
             result.AddRange(query4);
             result.AddRange(query5);
             result.AddRange(query6);
             result.AddRange(query7);
-            result.AddRange(query8);
+            result.AddRange(query8);*/
 
             List<TwitterEntry> cadastro = new List<TwitterEntry>();
             List<TwitterEntry> retuite = new List<TwitterEntry>();
@@ -68,9 +68,9 @@ namespace PromoTweet
                 }
                 
             }
-            result.Clear();
+            //result.Clear();
 
-            divulgacao.Text = loadTweets(cadastro);
+            divulgacao.Text = loadTweets(result);
             retweets.Text = loadTweets(retuite);
             descontos.Text = loadTweets(desconto);
 
@@ -82,7 +82,7 @@ namespace PromoTweet
             StringBuilder sb = new StringBuilder();
             int id = 0;
 
-            sb.Append("<table style=\"width:270\">");
+            sb.Append("<table >");
             foreach (TwitterEntry entry in lista)
             {
                 sb.Append("<tr><td>");

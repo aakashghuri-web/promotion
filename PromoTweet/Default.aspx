@@ -35,10 +35,8 @@
                 <td>
                     <div class="conteudo">
                         <asp:image ID="Image5" runat="server" ImageUrl="~/Imagens/divulgacao2.png"></asp:image>
-                        <div style="background-color:White">
+                        <div class="tweetContainer">
                             <asp:Label ID="divulgacao" runat="server" Text=""></asp:Label>    
-                            <asp:ImageButton ID="ImageButton2" runat="server" 
-                                ImageUrl="Imagens/setaBaixo.png"/>
                         </div>
                     </div>
                 </td>
@@ -47,8 +45,6 @@
                         <asp:image ID="Image10" runat="server" ImageUrl="~/Imagens/retweetes2.png"></asp:image>
                         <div style="background-color:White">
                             <asp:Label ID="retweets" runat="server" Text=""></asp:Label>
-                            <asp:ImageButton ID="ImageButton3" runat="server" 
-                                ImageUrl="Imagens/setaBaixo.png"/>
                         </div>
                     </div>
                 </td>
@@ -57,8 +53,6 @@
                         <asp:image ID="Image15" runat="server" ImageUrl="~/Imagens/descontos2.png"></asp:image>
                         <div style="background-color:White">
                             <asp:Label ID="descontos" runat="server" Text=""></asp:Label>
-                            <asp:ImageButton ID="ImageButton4" runat="server" 
-                                ImageUrl="Imagens/setaBaixo.png"/>
                         </div>
                     </div>
                 </td>
