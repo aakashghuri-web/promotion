@@ -3,15 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace MinWeb
+namespace PromoTweet.Classificador
 {
     class Preprocessador
     {
-        public static String removerAcentuacao(String txt)
+        public static String adaptarTexto(String txt)
         {
+            if (txt.Substring(0, 2).Equals("rt"))
+            {
+                txt = txt.Substring(2);
+            }
+
+
             if (txt != null && !txt.Equals(""))
             {
-
 
                 char[] acentuados = new char[] { 'ç', 'á', 'à', 'ã', 'â', 'ä', 'é', 'è', 'ê', 'ë', 'í', 'ì', 'î', 'ï', 'ó', 'ò', 'õ', 'ô', 'ö', 'ú', 'ù', 'û', 'ü' };
                 char[] naoAcentuados = new char[] { 'c', 'a', 'a', 'a', 'a', 'a', 'e', 'e', 'e', 'e', 'i', 'i', 'i', 'i', 'o', 'o', 'o', 'o', 'o', 'u', 'u', 'u', 'u' };
@@ -22,11 +27,19 @@ namespace MinWeb
                 }
 
             }
+
+            txt = txt.Replace("rt ", "#rt ");
+            txt = txt.Replace("retweet", "#rt");
+            txt = txt.Replace("de um #rt", "de #rt");
+
+            txt = removerPontuacao(txt);
+            txt = adaptarPreco(txt);
+
             return txt;
         }
 
 
-        public static String adaptarPreco(String s)
+        private static String adaptarPreco(String s)
         {
             String[] reais = new String[] { " r$ ", "r$ ", " r$" };
             String[] porcento = new String[] { " % ", "% ", " %" };
@@ -40,7 +53,7 @@ namespace MinWeb
             return s;
         }
 
-        public static String removerPontuacao(String s)
+        private static String removerPontuacao(String s)
         {
             String[] acentuados = new String[] { ":", "," };
 

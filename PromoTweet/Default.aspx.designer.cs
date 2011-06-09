@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Mineracao1._0 {
+namespace PromoTweet {
     
     
     public partial class _Default {
@@ -58,13 +58,13 @@ namespace Mineracao1._0 {
         protected global::System.Web.UI.WebControls.Image Image5;
         
         /// <summary>
-        /// Label1 control.
+        /// divulgacao control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.Label divulgacao;
         
         /// <summary>
         /// ImageButton2 control.
@@ -85,13 +85,13 @@ namespace Mineracao1._0 {
         protected global::System.Web.UI.WebControls.Image Image10;
         
         /// <summary>
-        /// Label2 control.
+        /// retweets control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label2;
+        protected global::System.Web.UI.WebControls.Label retweets;
         
         /// <summary>
         /// ImageButton3 control.
@@ -112,13 +112,13 @@ namespace Mineracao1._0 {
         protected global::System.Web.UI.WebControls.Image Image15;
         
         /// <summary>
-        /// Label3 control.
+        /// descontos control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label3;
+        protected global::System.Web.UI.WebControls.Label descontos;
         
         /// <summary>
         /// ImageButton4 control.

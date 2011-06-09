@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Mineracao1._0._Default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="PromoTweet._Default" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -36,7 +36,7 @@
                     <div class="conteudo">
                         <asp:image ID="Image5" runat="server" ImageUrl="~/Imagens/divulgacao2.png"></asp:image>
                         <div style="background-color:White">
-                            <asp:Label ID="Label1" runat="server" Text=""></asp:Label>    
+                            <asp:Label ID="divulgacao" runat="server" Text=""></asp:Label>    
                             <asp:ImageButton ID="ImageButton2" runat="server" 
                                 ImageUrl="Imagens/setaBaixo.png"/>
                         </div>
@@ -46,7 +46,7 @@
                     <div class="conteudo">
                         <asp:image ID="Image10" runat="server" ImageUrl="~/Imagens/retweetes2.png"></asp:image>
                         <div style="background-color:White">
-                            <asp:Label ID="Label2" runat="server" Text=""></asp:Label>
+                            <asp:Label ID="retweets" runat="server" Text=""></asp:Label>
                             <asp:ImageButton ID="ImageButton3" runat="server" 
                                 ImageUrl="Imagens/setaBaixo.png"/>
                         </div>
@@ -56,7 +56,7 @@
                     <div class="conteudo">
                         <asp:image ID="Image15" runat="server" ImageUrl="~/Imagens/descontos2.png"></asp:image>
                         <div style="background-color:White">
-                            <asp:Label ID="Label3" runat="server" Text=""></asp:Label>
+                            <asp:Label ID="descontos" runat="server" Text=""></asp:Label>
                             <asp:ImageButton ID="ImageButton4" runat="server" 
                                 ImageUrl="Imagens/setaBaixo.png"/>
                         </div>
