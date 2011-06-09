@@ -84,6 +84,11 @@ input:focus {
     text-align:left;
 }
 
+.tweetBox:hover
+{
+   background-color:Aqua;
+}
+
 .tweetContainer 
 {
     background-color:White;
