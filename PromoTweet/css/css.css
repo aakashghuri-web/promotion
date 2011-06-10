@@ -52,6 +52,7 @@ input:focus {
     height:60px;
     font-family:Calibri;
     padding:0 28px 0 28px;
+    max-height:400px;
 }
 
 .linksTweet
@@ -95,7 +96,7 @@ input:focus {
     overflow:hidden;
     overflow-x:hidden;
     width:276px;
-    height:400px;
+    max-height:400px;
 }
 
 .tweetContainer:hover

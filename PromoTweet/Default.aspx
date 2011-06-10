@@ -23,41 +23,49 @@
                     </div>
                     <div style="float:left">
                         <asp:ImageButton ID="ImageButtonSearch" runat="server" 
-                            ImageUrl="~/Imagens/botaoSearch2.png" />
+                            ImageUrl="~/Imagens/botaoSearch2.png" onclick="ImageButtonSearch_Click1" />
                     </div>
                     <div style="clear:left;"></div>
                     <br />
                     <br />
                 </div>
             </div>
-        <table>
-            <tr>
-                <td>
-                    <div class="conteudo">
-                        <asp:image ID="Image5" runat="server" ImageUrl="~/Imagens/divulgacao2.png"></asp:image>
-                        <div class="tweetContainer">
-                            <asp:Label ID="divulgacao" runat="server" Text=""></asp:Label>    
-                        </div>
-                    </div>
-                </td>
-                <td>
-                    <div class="conteudo">
-                        <asp:image ID="Image10" runat="server" ImageUrl="~/Imagens/retweetes2.png"></asp:image>
-                        <div style="background-color:White">
-                            <asp:Label ID="retweets" runat="server" Text=""></asp:Label>
-                        </div>
-                    </div>
-                </td>
-                <td>
-                    <div class="conteudo">
-                        <asp:image ID="Image15" runat="server" ImageUrl="~/Imagens/descontos2.png"></asp:image>
-                        <div style="background-color:White">
-                            <asp:Label ID="descontos" runat="server" Text=""></asp:Label>
-                        </div>
-                    </div>
-                </td>
-            </tr>
-        </table>
+            <div>
+                <asp:ScriptManager ID="ScriptManager1" runat="server">
+                </asp:ScriptManager>
+                <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                    <ContentTemplate>
+                        <table>
+                            <tr>
+                                <td>
+                                    <div class="conteudo">
+                                        <asp:Image ID="Image5" runat="server" ImageUrl="~/Imagens/divulgacao2.png" />
+                                        <div class="tweetContainer">
+                                            <asp:Label ID="divulgacao" runat="server" Text=""></asp:Label>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="conteudo">
+                                        <asp:Image ID="Image10" runat="server" ImageUrl="~/Imagens/retweetes2.png" />
+                                        <div style="background-color:White">
+                                            <asp:Label ID="retweets" runat="server" Text=""></asp:Label>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="conteudo">
+                                        <asp:Image ID="Image15" runat="server" ImageUrl="~/Imagens/descontos2.png" />
+                                        <div style="background-color:White">
+                                            <asp:Label ID="descontos" runat="server" Text=""></asp:Label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </ContentTemplate>
+                </asp:UpdatePanel>
+            </div>
         </form>
     </div>
 </body>

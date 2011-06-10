@@ -123,6 +123,9 @@
     <Compile Include="Account\Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Classifier\Classificador.cs" />
+    <Compile Include="Classifier\MensagemAux.cs" />
+    <Compile Include="Classifier\Preprocessador.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
