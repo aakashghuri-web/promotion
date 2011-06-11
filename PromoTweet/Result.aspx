@@ -18,7 +18,7 @@
 </head>
 <body>
     <div id="divTudo">
-        <form id="form1" runat="server">
+        <form id="form1" runat="server" defaultbutton="ImageButtonSearch">
             <div style="padding-left:20px; padding-top:10px;">
                 <a title="promotion" href="Default.aspx">
                 <asp:ImageButton ID="ImageButtonLogo" runat="server" 
