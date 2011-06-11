@@ -50,19 +50,19 @@
     <Reference Include="System.Web.ApplicationServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="About.aspx" />
     <Content Include="Account\ChangePassword.aspx" />
     <Content Include="Account\ChangePasswordSuccess.aspx" />
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Register.aspx" />
-    <Content Include="css\css.css" />
+    <Content Include="Imagens\top_promocoes.png" />
+    <Content Include="Result.aspx" />
+    <Content Include="Styles\css.css" />
     <Content Include="Imagens\botaoSearch.png" />
     <Content Include="Imagens\botaoSearch2.png" />
     <Content Include="Imagens\campoSearch.png" />
     <Content Include="Imagens\campoSearch2.png" />
     <Content Include="Imagens\campoSearch3.png" />
     <Content Include="Imagens\campoSearch4.png" />
-    <Content Include="Imagens\Copy of divulgacao2.png" />
     <Content Include="Imagens\descontos.png" />
     <Content Include="Imagens\descontos2.png" />
     <Content Include="Imagens\divulgacao.png" />
@@ -74,7 +74,6 @@
     <Content Include="Imagens\retweetes.png" />
     <Content Include="Imagens\retweetes2.png" />
     <Content Include="Imagens\setaBaixo.png" />
-    <Content Include="Imagens\top_promocoes.png" />
     <Content Include="Styles\Site.css" />
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
@@ -90,13 +89,6 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="About.aspx.cs">
-      <DependentUpon>About.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="About.aspx.designer.cs">
-      <DependentUpon>About.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Account\ChangePassword.aspx.cs">
       <DependentUpon>ChangePassword.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -135,10 +127,18 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Extractor\Util.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Result.aspx.cs">
+      <DependentUpon>Result.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Result.aspx.designer.cs">
+      <DependentUpon>Result.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
