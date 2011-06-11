@@ -7,6 +7,15 @@
     <link href="Styles/css.css" rel="stylesheet" type="text/css" />
     <title></title>
 </head>
+<script language="javascript" type ="text/javascript">
+
+    function Reset() {
+
+        alert("Top Promoções!");
+
+    }
+
+</script>
 <body>
     <div id="divTudo">
         <form id="form1" runat="server" >
@@ -27,6 +36,8 @@
                     </div>
                     <div style="clear:left;"></div>
                     <br />
+                    <asp:ImageButton ID="ImageButton1" runat="server" 
+                        ImageUrl="~/Imagens/top_promocoes.png"  OnClientClick="javascript:Reset();"/>
                     <br />
                 </div>
             </div>
@@ -47,7 +58,8 @@
                                 </td>
                                 <td>
                                     <div class="conteudo">
-                                        <asp:Image ID="Image10" runat="server" ImageUrl="~/Imagens/retweetes2.png" />
+                                        <asp:Image ID="Image10" runat="server" ImageUrl="~/Imagens/retweetes2.png" 
+                                            style="height: 53px" />
                                         <div class="tweetContainer">
                                             <asp:Label ID="retweets" runat="server" Text=""></asp:Label>
                                         </div>

@@ -62,6 +62,7 @@
     <Content Include="Imagens\campoSearch2.png" />
     <Content Include="Imagens\campoSearch3.png" />
     <Content Include="Imagens\campoSearch4.png" />
+    <Content Include="Imagens\Copy of divulgacao2.png" />
     <Content Include="Imagens\descontos.png" />
     <Content Include="Imagens\descontos2.png" />
     <Content Include="Imagens\divulgacao.png" />
@@ -73,6 +74,7 @@
     <Content Include="Imagens\retweetes.png" />
     <Content Include="Imagens\retweetes2.png" />
     <Content Include="Imagens\setaBaixo.png" />
+    <Content Include="Imagens\top_promocoes.png" />
     <Content Include="Styles\Site.css" />
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
