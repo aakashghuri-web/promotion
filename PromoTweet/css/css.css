@@ -93,9 +93,9 @@ input:focus {
 .tweetContainer 
 {
     background-color:White;
-    overflow:hidden;
+    overflow:scroll;
     overflow-x:hidden;
-    width:276px;
+     width:280px;
     max-height:400px;
 }
 

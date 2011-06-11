@@ -23,7 +23,7 @@
                     </div>
                     <div style="float:left">
                         <asp:ImageButton ID="ImageButtonSearch" runat="server" 
-                            ImageUrl="~/Imagens/botaoSearch2.png" onclick="ImageButtonSearch_Click1" />
+                            ImageUrl="~/Imagens/botaoSearch2.png" onclick="searchKey" />
                     </div>
                     <div style="clear:left;"></div>
                     <br />
@@ -48,7 +48,7 @@
                                 <td>
                                     <div class="conteudo">
                                         <asp:Image ID="Image10" runat="server" ImageUrl="~/Imagens/retweetes2.png" />
-                                        <div style="background-color:White">
+                                        <div class="tweetContainer">
                                             <asp:Label ID="retweets" runat="server" Text=""></asp:Label>
                                         </div>
                                     </div>
@@ -56,7 +56,7 @@
                                 <td>
                                     <div class="conteudo">
                                         <asp:Image ID="Image15" runat="server" ImageUrl="~/Imagens/descontos2.png" />
-                                        <div style="background-color:White">
+                                        <div class="tweetContainer">
                                             <asp:Label ID="descontos" runat="server" Text=""></asp:Label>
                                         </div>
                                     </div>
