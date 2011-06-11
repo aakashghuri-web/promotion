@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using System.Text;
 
 using PromoTweet.Twitter;
+using PromoTweet.Extractor;
 
 namespace PromoTweet
 {
@@ -21,18 +22,18 @@ namespace PromoTweet
 
             List<TwitterEntry> query1 = engine.BuscaEntradaTwitter("promoção");
             List<TwitterEntry> query2 = engine.BuscaEntradaTwitter("ganhe");
-            List<TwitterEntry> query3 = engine.BuscaEntradaTwitter("concorra");
+            //List<TwitterEntry> query3 = engine.BuscaEntradaTwitter("concorra");
             List<TwitterEntry> query4 = engine.BuscaEntradaTwitter("desconto");
-            List<TwitterEntry> query5 = engine.BuscaEntradaTwitter("retuite");
-            List<TwitterEntry> query6 = engine.BuscaEntradaTwitter("oferta");
+            //List<TwitterEntry> query5 = engine.BuscaEntradaTwitter("retuite");
+            //List<TwitterEntry> query6 = engine.BuscaEntradaTwitter("oferta");
             List<TwitterEntry> query7 = engine.BuscaEntradaTwitter("cadastre");
             
             result.AddRange(query1);
             result.AddRange(query2);
-            result.AddRange(query3);
+            //result.AddRange(query3);
             result.AddRange(query4);
-            result.AddRange(query5);
-            result.AddRange(query6);
+            //result.AddRange(query5);
+            //result.AddRange(query6);
             result.AddRange(query7);
 
             List<TwitterEntry> cadastro = new List<TwitterEntry>();
@@ -68,78 +69,9 @@ namespace PromoTweet
             }
             //result.Clear();
 
-            divulgacao.Text = loadTweets(result);
-            retweets.Text = loadTweets(retuite);
-            descontos.Text = loadTweets(desconto);
-
-        }
-
-        private string loadTweets(List<TwitterEntry> lista)
-        {
-            
-            StringBuilder sb = new StringBuilder();
-            int id = 0;
-
-            sb.Append("<table >");
-            foreach (TwitterEntry entry in lista)
-            {
-                sb.Append("<tr><td>");
-                sb.Append("<div id=\"entry" + id + "\"" + "display:\"block\" ");
-                sb.Append("<div style=\"float:left; width:20%\" display:\"block\">");
-                sb.Append("<img height=\"48\" + width=\"48\" id=\"image" + id + "\" src=\"" + entry.Avatar + "\" title=\"" + entry.Author + "\" />");
-                sb.Append("</div>");
-
-                sb.Append("<div class=\"tweetBox\">");
-                sb.Append("<a id=\"" + id + "\"" + "target=\"_blank\" href=\"" + entry.Uri + "\" class=\"linksTweet\">" + entry.Author + "</a>");
-                sb.Append("<br/><label id=\"lb" + id + "\" style=\"text-align:center\">" + this.makeLink(entry.Tweet) + " </label>");
-                sb.Append("</div>");
-                sb.Append("</div>");
-                sb.Append("</tr></td>");
-                id++;
-            }
-            sb.Append("</table>");
-
-            return sb.ToString() ;
-
-        }
-
-        private string makeLink(string txtUri)
-        {
-            if (txtUri.Contains("http://"))
-            {
-
-                int i = txtUri.IndexOf("http://");
-                int primeiraPosicaoLink = i;
-                char[] arrayChar = txtUri.ToCharArray();
-                string link = "";
-                while (i < arrayChar.Length && arrayChar[i] != ' ')
-                {
-                    link = link + arrayChar[i];
-                    i++;
-                }
-
-                link = "<a target=\"_blank\" href=\"" + link + "\">" + link + "</a>";
-
-                string txtPrimeiraParteString = "";
-                int a = 0;
-                while (a < primeiraPosicaoLink)
-                {
-                    txtPrimeiraParteString = txtPrimeiraParteString + arrayChar[a];
-                    a++;
-                }
-
-                string txtTerceiraParteString = "";
-                while (i < arrayChar.Length)
-                {
-                    txtTerceiraParteString = txtTerceiraParteString + arrayChar[i];
-                    i++;
-                }
-
-                txtUri = txtPrimeiraParteString + link + txtTerceiraParteString;
-
-            }
-
-            return txtUri;
+            divulgacao.Text = Util.loadTweets(result);
+            retweets.Text = Util.loadTweets(retuite);
+            descontos.Text = Util.loadTweets(desconto);
 
         }
 
@@ -154,7 +86,7 @@ namespace PromoTweet
             List<TwitterEntry> query3 = engine.BuscaEntradaTwitter("concorra " + TextBoxSearch.Text);
             List<TwitterEntry> query4 = engine.BuscaEntradaTwitter("desconto " + TextBoxSearch.Text);
             List<TwitterEntry> query5 = engine.BuscaEntradaTwitter("retuite " + TextBoxSearch.Text);
-            List<TwitterEntry> query6 = engine.BuscaEntradaTwitter("oferta " + TextBoxSearch.Text);
+            //List<TwitterEntry> query6 = engine.BuscaEntradaTwitter("oferta " + TextBoxSearch.Text);
             List<TwitterEntry> query7 = engine.BuscaEntradaTwitter("cadastre " + TextBoxSearch.Text);
 
             result.AddRange(query1);
@@ -162,7 +94,7 @@ namespace PromoTweet
             result.AddRange(query3);
             result.AddRange(query4);
             result.AddRange(query5);
-            result.AddRange(query6);
+            //result.AddRange(query6);
             result.AddRange(query7);
 
             List<TwitterEntry> cadastro = new List<TwitterEntry>();
@@ -196,11 +128,14 @@ namespace PromoTweet
                 }
 
             }
-            //result.Clear();
 
-            divulgacao.Text = loadTweets(result);
-            retweets.Text = loadTweets(retuite);
-            descontos.Text = loadTweets(desconto);
+            result.Clear();
+
+            Session["divulgacao"] = Util.loadTweets(cadastro);
+            Session["retweets"] = Util.loadTweets(retuite);
+            Session["descontos"] = Util.loadTweets(desconto);
+
+            Response.Redirect("Result.aspx");
         }
     }
 }

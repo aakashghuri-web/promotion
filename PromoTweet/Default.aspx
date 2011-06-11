@@ -6,6 +6,15 @@
 <head runat="server">
     <link href="Styles/css.css" rel="stylesheet" type="text/css" />
     <title></title>
+    <script language="javascript" type ="text/javascript">
+	
+	    function Reset() {
+	
+	        alert("Top Promoções!");
+	
+	    }
+	
+	</script>
 </head>
 <script language="javascript" type ="text/javascript">
 
@@ -18,7 +27,7 @@
 </script>
 <body>
     <div id="divTudo">
-        <form id="form1" runat="server" >
+        <form id="form1" runat="server">
             <div style="padding-left:20px; padding-top:10px;">
                 <asp:ImageButton ID="ImageButtonLogo" runat="server" 
                     ImageUrl="~/Imagens/logoPromotion2.png" />
@@ -36,8 +45,13 @@
                     </div>
                     <div style="clear:left;"></div>
                     <br />
+<<<<<<< .mine
+                     <asp:ImageButton ID="ImageButton1" runat="server"
+	                        ImageUrl="~/Imagens/top_promocoes.png"  OnClientClick="javascript:Reset();"/>
+=======
                     <asp:ImageButton ID="ImageButton1" runat="server" 
                         ImageUrl="~/Imagens/top_promocoes.png"  OnClientClick="javascript:Reset();"/>
+>>>>>>> .r29
                     <br />
                 </div>
             </div>
