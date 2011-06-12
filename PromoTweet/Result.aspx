@@ -6,15 +6,6 @@
 <head id="Head1" runat="server">
     <link href="Styles/css.css" rel="stylesheet" type="text/css" />
     <title></title>
-    <script language="javascript" type ="text/javascript">
-
-        function Reset() {
-
-            alert("Top Promoções!");
-
-        }
-	
-	</script>
 </head>
 <body>
     <div id="divTudo">
@@ -38,8 +29,6 @@
                     </div>
                     <div style="clear:left;"></div>
                     <br />
-                    <asp:ImageButton ID="ImageButton1" runat="server"
-	                        ImageUrl="~/Imagens/top_promocoes.png"  OnClientClick="javascript:Reset();"/>
                     <br />
                 </div>
             </div>

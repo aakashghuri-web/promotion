@@ -1,19 +1,30 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="PromoTweet._Default" %>
+﻿<%@ Page Language="C#" EnableSessionState="ReadOnly" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="PromoTweet._Default" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head runat="server">
     <link href="Styles/css.css" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript" src="Scripts/jquery-1.4.1.min.js"></script>
+	<script type="text/javascript" src="Scripts/fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
+	<script type="text/javascript" src="Scripts/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="Scripts/fancybox/jquery.fancybox-1.3.4.css" media="screen" />
+
     <title></title>
     <script language="javascript" type ="text/javascript">
 	
-	    function Reset() {
-	
-	        alert("Top Promoções!");
-	
-	    }
-	
+
+        $(document).ready(function() {
+
+            $("#various1").fancybox({
+				'titlePosition'		: 'outside',
+				'transitionIn'		: 'fade',
+				'transitionOut'		: 'elastic',
+			});
+
+        });
 	</script>
 </head>
 <body>
@@ -22,6 +33,9 @@
             <div style="padding-left:20px; padding-top:10px;">
                 <asp:ImageButton ID="ImageButtonLogo" runat="server" 
                     ImageUrl="~/Imagens/logoPromotion2.png" />
+                <span style="text-align:right;padding-left:480px; cursor:pointer">
+                    <a id="various1" href="#inline1"><img alt="Top Tweets" title="Top Tweets" src="Imagens/top3.png"/></a>
+                </span>
             </div>
             <div align="center" style="margin-top:10px">
                 <div align="center" style="width:400px;">
@@ -36,8 +50,6 @@
                     </div>
                     <div style="clear:left;"></div>
                     <br />
-                     <asp:ImageButton ID="ImageButton1" runat="server"
-	                        ImageUrl="~/Imagens/top_promocoes.png"  OnClientClick="javascript:Reset();"/>
                     <br />
                 </div>
             </div>
@@ -78,6 +90,12 @@
                 </asp:UpdatePanel>
             </div>
         </form>
+    </div>
+    <div style="display: none;">
+		<div id="inline1" title="Top Promotions" class="topPromotions"">
+            <p class="linksTweet" style="text-align:center; font-size:18px">Top Promotions</p>
+			<asp:Label ID="top" runat="server" Text=""></asp:Label>
+        </div>
     </div>
 </body>
 </html>

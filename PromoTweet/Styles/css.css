@@ -6,6 +6,7 @@
 a 
 {
     font-weight:bold;
+    color:Teal;
 }
 
 
@@ -19,6 +20,33 @@ a:hover
     text-decoration:underline;
 }
 
+li
+{
+    padding-bottom: 4px;
+    margin-bottom: 4px;
+    padding-right:3px;
+    font-family: Arial,"Helvetica Neue",sans-serif
+}
+
+li:hover
+{
+   background-color:#DEEFF6;
+   cursor:pointer;
+}
+
+li a 
+{
+    color:Teal; 
+    text-decoration: none;
+    font-family: Arial,"Helvetica Neue",sans-serif;
+    font-size: 14px;
+    font-weight:bold;
+}
+
+li a:hover
+{
+    text-decoration: underline;
+}
 
 input:focus {
     outline: none;
@@ -55,7 +83,7 @@ input:focus {
     text-align:center;
     float:left;
     width:270px; 
-    height:60px;
+    height:400px;
     font-family:Calibri;
     padding:0 28px 0 28px;
     max-height:400px;
@@ -110,4 +138,14 @@ input:focus {
     overflow:scroll;
     overflow-x:hidden;
     width:280px;
+}
+
+.topPromotions 
+{
+    width:280px;
+    height:360px;
+    overflow:auto;
+    font-size:13px;
+    text-align:left;
+    font-family:Arial,"Helvetica Neue",sans-serif;
 }

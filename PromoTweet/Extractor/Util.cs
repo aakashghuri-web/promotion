@@ -3,6 +3,7 @@
 using PromoTweet.Twitter;
 using System.Collections.Generic;
 using System.Text;
+using System.Linq;
 
 namespace PromoTweet.Extractor
 {
@@ -78,6 +79,27 @@ namespace PromoTweet.Extractor
                 id++;
             }
             sb.Append("</table>");
+
+            return sb.ToString();
+        }
+
+        public static string topTweets(Dictionary<string, int> list)
+        {
+
+            var items = (from i in list.Keys
+                        orderby list[i] descending
+                        select i).Take(10);
+            
+            //gera html
+            StringBuilder sb = new StringBuilder();
+            sb.Append("<ol>");
+            foreach (string k in items)
+            {
+                sb.Append("<li>");
+                sb.Append(Util.makeLink(k));
+                sb.Append("</li>");
+            }
+            sb.Append("</ol>");
 
             return sb.ToString();
         }

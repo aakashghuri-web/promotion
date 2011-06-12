@@ -41,6 +41,12 @@ namespace PromoTweet
             List<TwitterEntry> desconto = new List<TwitterEntry>();
             
             HashSet<int> keys = new HashSet<int>();
+            //app data
+            Dictionary<string, int> persistent = (Dictionary<string, int>) Application["persistent"];
+            if (persistent == null)
+            {
+                persistent = new Dictionary<string, int>();
+            }
 
             foreach (TwitterEntry entry in result)
             {
@@ -65,13 +71,25 @@ namespace PromoTweet
 
                     keys.Add(entry.Tweet.GetHashCode());
                 }
-                
-            }
-            //result.Clear();
 
-            divulgacao.Text = Util.loadTweets(result);
+                if (persistent.ContainsKey(entry.Tweet))
+                {
+                    persistent[entry.Tweet] = persistent[entry.Tweet] + 1;
+                }
+                else
+                {
+                    persistent[entry.Tweet] = 1;
+                }
+            }
+
+            Application.Clear();
+            Application["persistent"] = persistent;
+
+            result.Clear();
+            divulgacao.Text = Util.loadTweets(cadastro);
             retweets.Text = Util.loadTweets(retuite);
             descontos.Text = Util.loadTweets(desconto);
+            top.Text = Util.topTweets(persistent);            
 
         }
 
@@ -84,5 +102,6 @@ namespace PromoTweet
                 Response.Redirect("Result.aspx");
             }
         }
+
     }
 }
