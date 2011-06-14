@@ -41,7 +41,7 @@
                             <tr>
                                 <td>
                                     <div class="conteudo">
-                                        <asp:Image ID="Image5" runat="server" ImageUrl="~/Imagens/divulgacao2.png" />
+                                        <asp:Image ID="Image5" runat="server" ImageUrl="~/Imagens/cadastro.png" />
                                         <div class="tweetContainer">
                                             <asp:Label ID="divulgacao" runat="server" Text=""></asp:Label>
                                         </div>
