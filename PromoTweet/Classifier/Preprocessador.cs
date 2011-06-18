@@ -7,14 +7,40 @@ namespace PromoTweet.Classificador
 {
     class Preprocessador
     {
-        public static String adaptarTexto(String txt)
+        public static String preProcessamento(String txt)
         {
+            txt = analiseLexica(txt);
+            txt = removerStopWords(txt);
+
+            txt = txt.Replace("rt ", "#rt ");
+            txt = txt.Replace("retweet", "#rt");
+
+            return txt;
+        }
+
+        private static String analiseLexica(String txt)
+        {
+            txt = txt.ToLower();
+            txt = removerAcentuacao(txt);
+            txt = removerPontuacao(txt);
+            txt = adaptarPreco(txt);
+            
+            return txt;
+        }
+
+        private static String removerStopWords(String txt) {
             if (txt.Substring(0, 2).Equals("rt"))
             {
                 txt = txt.Substring(2);
             }
 
+            txt = txt.Replace(" um ", " ");
 
+            return txt;
+        }
+        
+        private static String removerAcentuacao(String txt)
+        {
             if (txt != null && !txt.Equals(""))
             {
 
@@ -27,13 +53,6 @@ namespace PromoTweet.Classificador
                 }
 
             }
-
-            txt = txt.Replace("rt ", "#rt ");
-            txt = txt.Replace("retweet", "#rt");
-            txt = txt.Replace("de um #rt", "de #rt");
-
-            txt = removerPontuacao(txt);
-            txt = adaptarPreco(txt);
 
             return txt;
         }
@@ -61,6 +80,8 @@ namespace PromoTweet.Classificador
             {
                 s = s.Replace(acentuados[i], "");
             }
+
+            s = s.Replace("#", "");
 
             return s;
         }
