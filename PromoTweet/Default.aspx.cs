@@ -16,7 +16,7 @@ namespace PromoTweet
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            if (Session["firstLoad"] == null)
+            if (TextBoxSearch.Text.Trim().Equals(""))
             {
                 TwitterSearch engine = new TwitterSearch();
                 List<TwitterEntry> result = new List<TwitterEntry>();
@@ -93,7 +93,6 @@ namespace PromoTweet
                 descontos.Text = Util.loadTweets(desconto);
                 top.Text = Util.topTweets(persistent);
 
-                Session["firstLoad"] = true;
             }
         }
 
